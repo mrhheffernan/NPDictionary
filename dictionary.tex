@@ -1,0 +1,289 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Dictionary
+% LaTeX Template
+% Version 1.0 (20/12/14)
+% 
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Vel (vel@latextemplates.com) inspired by a template by Marc Lavaud
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[10pt,a4paper,twoside]{article} % 10pt font size, A4 paper and two-sided margins
+
+\usepackage[top=3.5cm,bottom=3.5cm,left=3.7cm,right=4.7cm,columnsep=30pt]{geometry} % Document margins and spacings
+
+\usepackage[utf8]{inputenc} % Required for inputting international characters
+\usepackage[T1]{fontenc} % Output font encoding for international characters
+
+\usepackage{palatino} % Use the Palatino font
+
+\usepackage{microtype} % Improves spacing
+\usepackage{amsmath}
+\usepackage{multicol,xparse,indentfirst,hanging} % Required for splitting text into multiple columns
+
+\usepackage[bf,sf,center]{titlesec} % Required for modifying section titles - bold, sans-serif, centered
+
+\usepackage{fancyhdr} % Required for modifying headers and footers
+\fancyhead[L]{\textsf{\rightmark}} % Top left header
+\fancyhead[R]{\textsf{\leftmark}} % Top right header
+\renewcommand{\headrulewidth}{1.4pt} % Rule under the header
+\fancyfoot[C]{\textbf{\textsf{\thepage}}} % Bottom center footer
+\renewcommand{\footrulewidth}{1.4pt} % Rule under the footer
+\pagestyle{fancy} % Use the custom headers and footers throughout the document
+\usepackage{color,hyperref}
+\definecolor{darkblue}{rgb}{0.0,0.0,0.3}
+\hypersetup{colorlinks,breaklinks,
+            linkcolor=darkblue,urlcolor=darkblue,
+            anchorcolor=darkblue,citecolor=darkblue}
+
+\newcommand{\entry}[4]{\markboth{#1}{#1}\begin{hangparas}{.25in}{1}\textbf{#1}\ {#2}\ $\bullet$\ \textit{#3}\ {#4} \end{hangparas}}  % Defines the command to print each word on the page, \markboth{}{} prints the first word on the page in the top left header and the last word in the top right
+% --------------------------------------------------------------------
+% Definitions (do not change this)
+% --------------------------------------------------------------------
+\newcommand{\HRule}[1]{\rule{\linewidth}{#1}}   % Horizontal rule
+
+\makeatletter                           % Title
+\def\printtitle{%                       
+    {\centering \@title\par}}
+\makeatother                                    
+
+\makeatletter                           % Author
+\def\printauthor{%                  
+    {\centering \large \@author}}               
+\makeatother           
+
+\let\multicolmulticols\multicols
+\let\endmulticolmulticols\endmulticols
+
+\RenewDocumentEnvironment{multicols}{mO{}}
+ {%
+  \ifnum#1=1
+    #2%
+  \else % More than 1 column
+    \multicolmulticols{#1}[#2]
+  \fi
+ }
+ {%
+  \ifnum#1=1
+  \else % More than 1 column
+    \endmulticolmulticols
+  \fi
+ }
+
+% --------------------------------------------------------------------
+% Metadata
+% --------------------------------------------------------------------
+\title{ \normalsize   \hspace{0.1in}  % Subtitle
+            \\[2.0cm]                               % 2cm spacing
+            \HRule{0.5pt} \\                        % Upper rule
+            \LARGE \textbf{\uppercase{A Working Dictionary for Relativistic Heavy-Ion Collision Physics}}    % Title
+            \HRule{2pt} \\ [0.5cm]      % Lower rule + 0.5cm spacing
+            \normalsize \today          % Todays date
+        }
+
+\author{Matthew Heffernan, Mayank Singh, Scott McDonald, Rouzbeh Yazdi, Sigtryggur Hauksson, Jessica Churchill\\%note that this order is entirely arbitrary, but I'm totally downgrading people that don't contribute - Matt
+        The Nuclear Theory Group\\   
+        Physics Department\\  
+        McGill University\\
+        %Corresponding author: \texttt{heffernan@physics.mcgill.ca} \\
+}
+
+
+
+\begin{document}
+% ------------------------------------------------------------------------------
+% Maketitle
+% ------------------------------------------------------------------------------
+\thispagestyle{empty}       % Remove page numbering on this page
+
+\printtitle                 % Print the title data as defined above
+    \vfill
+\printauthor                % Print the author data as defined above
+\newpage
+
+\setcounter{page}{1}        % Set page numbering to begin on this page
+\frenchspacing              % Makes text more compact by reducing spacing between sentences
+%----------------------------------------------------------------------------------------
+
+
+%%%% sample entry
+% \entry{Term}{(Abbreviation or other name, if any)}{Conceptual description}{For more information, see [reference]}
+%
+%
+%------------------------------------------------------------------------------
+%
+% Don't worry about alphabetizing, it's a simple linux command to do, so I(Matt) can do this periodically.
+%
+% With abbreviations, I(Matt) chose to put the most recognizable form as the term
+%
+% Please make defitions one line, even with equations. This makes it much easier to sort the file.
+%------------------------------------------------------------------------------
+
+
+%    Terms to add:
+%space-time vs. momentum rapidity
+%saturation momentum (Q_s)
+%colour strings
+%transverse momentum (p_T) 
+%degree of freedom
+%local thermodynamic equilibrium 
+%hadron gas
+%baryon density
+%anisotropic flow
+
+
+%\section*{A}
+\begin{multicols}{1}
+\entry{Acoplanarity}{}{The degree to which the paths of scattered particles deviate from being coplanar. This is used as a test of perturbative QCD calculations as it is caused by gluon emission.}{\cite{PhysRevD.22.2152}}
+\entry{AdS/CFT Correspondence}{(Sometimes referred to as AdS/CFT)}{A correspondence discovered by Juan Maldancena showing that a calculation in a Conformal Field Theory corresponds to a lower-dimensionality Anti-deSitter space calculation, allowing for the projection of string theory results to more physical systems. This is generally how string theory calculations are brought into heavy-ion physics.}{}
+\entry{AMY}{}{An abbreviation for the authors Arnold (Peter), Moore (Guy), and Yaffe (Laurence). These authors wrote a series of important papers around the turn of the 21st century. These papers were the first to evalute the LPM effect fully using perturbative thermal field theory. Thus, they were the first to include all leading order processes in a thermal QGP medium. This allowed for the correct evaluation of photon emission rate, jet-medium interaction, transport theory and the construction of a kinetic theory of quarks and gluons.}{} %Unknown and Siggi
+\entry{Anisotropy}{}{The property of being different in different directions; not being isotropic. }{}
+\entry{Bayesian Analysis}{}{A method for extracting information from simulations that uses the methods of Bayesian statistics. This inolves determining a prior distribution and using experimental results to constrain and tune theoretical quantities.}{}
+\entry{BDMPS}{}{}{}
+\entry{Beam Energy Scan}{(BES)}{A program at RHIC/BNL that aims to find the QCD critical point by exploring the QCD phase diagram at nonzero baryochemical potential.}{See also Critical point of QCD phase diagram.}
+\entry{Binary Collisions}{}{Binary collisions are nucleon-nucleon collisions within nuclei-nuclei collisions. The criterion for a binary collision comes from a simple geometric cross section: if nucleons from different nuclei are within $d=\sqrt{\frac{\sigma}{\pi}}$ in the transverse plane, a binary collision is deemed to have occurred. MC-Glauber uses the notion of binary collisions to determine the deposition of energy.}{}
+\entry{Bjorken Flow}{}{Bjorken Flow is an analytic solution of relativisic ideal fluid dynamics equations and that of relativistic Navier-Stokes equations. The solution is in 0+1 D (the $\tau$ and $\eta$ coordinates are related and only one is independent). Isotropy and homogeneity is assumed in transverse plane. Longitudinal flow is given as $v_{z} = z/t$. This is probbly the simplest solution in cylindrical geometry and is applicable for heavy-ion collisions at high energies at central rapidities. This is also known as boost-invariant flow. It is best understood in Milne coordinates.}{This early paper by Bjorken is an interesting read with lot of physical intuition \cite{PhysRevD.27.140}. Also, this is a more recent paper with Israel-Stewart equations in Bjorken flow \cite{PhysRevC.78.034913}}
+\entry{Boltzmann equation}{}{One of the fundamental equations of transport theories. This is a semi-classical approach which characterizes changing distributions by integrating over gain and loss terms to determine the properties of the material. A  very powerful tool from which many transport coefficients can be extracted.}{}
+\entry{Boost Invariance}{}{For extremely high collision energies, the results are insensitive to small boosts (relative to the collision energy). In this way, the results are ``boost invariant." }{Also see Borken Flow.}
+\entry{Bulk Viscosity}{($\zeta$, also called volume viscosity)}{This is directly related to the compressibility of a fluid and measures how sound attenuation and the difficulty of compressing and expanding the fluid. A theory of incompressible fluids does not include bulk viscosity.}{}
+\entry{Centrality}{}{Ordering of events, usually by the multiplicity. This is done both experimentally and for simulations. Central events are the higher energy/multiplicity events and tend to correspond to small impact parameter for nucleus-nucleus collisions. Peripheral events correspond to lower energy, and large impact parameter. Centrality ranges from 0-100\% with ``central" corresponding to lower percentages and ``peripheral" corresponding to high percentages.}{For more information, see [reference]}
+\entry{CFL condition}{(Courant-Friedrichs-Lewy condition)}{CFL condition is a condition on the maximum size of the temporal cell size as compared to the spatial cell size while numerically solving the partial differential equations. This condition needs to be satisfied for convergence of the solutions. Effectively, the size of time-step should be smaller than the time required for a wave to travel to adjacent spatial grid points. For KT algorithm, CFL condition is more stringent as $\Delta t \leq \Delta x/8c$ where $c$ is the maximum propagation speed of waves.}{A nice description of CFL condition can be found on its \href{https://en.wikipedia.org/wiki/Courant-Friedrichs-Lewy_condition}{Wikipedia page}.} %Huh, I really thought it stood for color flavor locking. Thanks guys, this really drives home how much we need this!--Matt
+\entry{Classical Yang-Mills}{(CYM)}{}{}
+\entry{Color coherence}{}{}{}
+\entry{Color Glass Condensate}{(CGC)}{An effective field theory and a state of matter proposed to exist in high energy nuclei. Color refers to the SU(3) color charge of QCD. Glass refers to the separation of scales between the color sources and color fields in the CGC framework. This is due to the fact that glass behaves as a solid on short time scales, but a fluid on large time scales. Condensate refers to the high density of gluons. The CGC treats valence (large momentum) partons within the nuclei as external sources that source small momentum partons. Thus the CGC lagrangian has a current term and the gluon kinetic term. It is entirely made of gauge fields, there are no quarks.}{}
+\entry{Cooper-Frye}{}{A hardonization procedure for switching from hydrodynamics to hadronic transport when the system becomes too dilute to be described by long-wavelength modes. The hydro system is evolved to below thermal Freeze-out and a hypersurface at the Freeze-out temperature is then defined and an appropriately-matched hadron spectrum is produced.}{}
+%\entry{Correlation length}{}{}{}
+\entry{Critical Point of QCD phase diagram}{}{This is a point on the temperature - baryon chemical potential phase diagram where there is a second order phase transition. From lattice QCD calculations, the phase transition from the hadronic phase to the QGP phase is known to be a smooth crossover at low baryon chemical potentials ($\mu_{B}$). On the other hand, phase transition is first-order at high $\mu_{B}$ and low temperature. So, the first order phase transition line has to stop somewhere before $\mu_{B} = 0$. This is the critical point.}{The search for critical point is a very active field and there are lots of good review articles. This short pedagogical article by Stephanov is a good place to begin \cite{Stephanov:2004wx}.}
+\entry{Cumulant Method}{}{}{}
+\entry{Dead cone}{}{A prediction of QCD theory that the probability of a heavy quark radiating a soft gluon is suppressed relative to that of a light quark. }{}
+\entry{Decoherence time}{}{}{}
+\entry{Deep Inelastic Scattering}{(DIS)}{A process that uses electrons, muons, and neutrinos to probe the interior of hadrons. DIS experiments tend are designed to give information of hadron susbtructure and were used to demonstrate the existence of quarks.}{}
+\entry{Eckart Frame}{}{For a viscous fluid with conserved charges, there is a non-trivial choice for the definition of fluid velocity (also see Landau-Lifshitz Frame). Fluid velocity could be defined parallel to the conserved charge current $J^{\mu} = \rho u^{\mu}$. The local rest frame with this definition of fluid velocity is called the Eckart frame. There is no net charge flux in this frame. For ideal fluids, Landau-Lifshitz frame and Eckart frame are identical.}{This pedagogical article by Paul Romatschke has a nice discussion on derivation of fluid dynamics and also choice of fluid velocity \cite{Romatschke:2009im}}
+\entry{Effective field theory}{(EFT)}{It's very common in physics to have two (or more) very different energy scales which we can call \(\Lambda_{\mathrm{low}}\) and \(\Lambda_{\mathrm{high}}\) with \(\Lambda_{\mathrm{low}} \ll \Lambda_{\mathrm{high}}\). A simple example is the weak decay of a neutron into a proton, electron and an antineutrino. There the low energy scale is the kinetic energy of the decay products and the high energy scale is the mass of the W boson which is the mediator of the weak decay. An effective field theory (EFT) tries to describe the physics at the low energy scale without using detailed knowledge of the physics at the high energy scale. In our example of the weak decay of neutrons, the EFT is called Fermi theory and does not mention W bosons but instead includes a four point vertex with the neutron, proton, electron and antineutrino. Other examples of EFTs are hydrodynamics, HTL effective theory, color-glass condensate, soft-collinear effective theory for jets and many, many others.}{} %Siggi
+\entry{EKRT}{}{A saturation-based model that contains pQCD + saturation + hydro. It is the leading physically-based competitor to IP-Glasma but initializes using mini-jets rather than being based in the color glass condensate framework. Energy deposition scales as the root of the product of thickness functions rather than simply the product that comes from IP-Glasma. This can be used to make comparisons to TRENTo, but with extreme caution.}{See also \cite{EKRT}}
+\entry{Energy-momentum tensor}{}{See stress-energy tensor}{}
+\entry{Equation of State}{(EoS)}{An equation relating thermodynamic quantities like pressure and energy density at equilibrium. QCD EoS at zero baryon potential can be obtained using Lattice QCD. Recently there has been some development regarding extending this EoS to non-zero baryon potentials.}{}
+\entry{Event Plane}{(EP)}{An angular plane defined by the final-state geometry.}{}
+\entry{Event Plane Correlators}{}{These define the correlations between the momentum-space fourier coefficients $v_n$. They tell us how much of, say, $v_2$ really comes from $v_4$. There are different methods for calculating these used by different experimental collaborations.}{}
+\entry{Event Plane Method}{}{}{}
+\entry{Event Shape Engineering}{}{}{}
+\entry{Flow harmonics}{}{See v$_n$.}{}
+%\entry{Fluctuations}{}{}{}
+\entry{Flux Limiter}{}{}{}
+\entry{Fragmentation function}{}{}{}
+\entry{Freeze-out}{}{When a type of interaction stops. Chemical freezeout refers to when non-kinetic particle interactions cease (e.g. species-changing processes, but really anything that isn't kinetic hard-ball scatterings). Kinetic freezeout refers to hard-ball style scattering events. Chemical freezeout happens at a higher temperature than kinetic freezeout, but sometimes one freezeout temperature is chosen for the sake of convenience.}{}
+\entry{Glasma}{}{A gluon plasma.}{}
+\entry{Gubser Flow}{}{Gubser Flow is an analytic solution of the ideal conformal relativistic hydrodynamics and conformal Navier-Stokes theory. It is a generalization of Bjorken flow. Like the Bjorken flow, dynamical variables here are lorentz boost invariant in one direction. Additionally there is also a non-trivial radial flow. This solution is radially symmetric. As there are two independent dynamical variables ($\tau$ and $r$), this is a 1+1 D solution.}{This MUSIC paper has a good discussion on Gubser flow, its counterpart for Israel-Stewart Hydrodynamics and the comparison of MUSIC to semi-analytic results \cite{Marrochio:2013wla}. The original Gubser flow papers by Gubser and Yarom are also good references \cite{Gubser:2010ze}\cite{Gubser:2010ui}}
+\entry{Hadronic afterburner}{(Hadron cascade)}{This stage follows hydrodynamics and Cooper-Frye sampling. This stage uses kinetic theory to propagate hadrons from the freezeout surface and tracks them as they would fly to detectors. Examples of hadronic afterburners include UrQMD and SMASH.}{}
+\entry{Hadronic re-scatterings}{}{}{}
+\entry{Hard probe}{}{This refers to particles or jets that probe the medium at momentum scales larger than the typical scale of the QGP medium.}{}
+\entry{Hard Thermal Loop}{(HTL)}{This is an effective field theory describing weakly coupled plasmas. It can describe both electromagnetic plasmas of electrons and photons and a weakly coupled quark-gluon plasma (i.e. a QGP at extremly high energy). The two energy scales are the temperature, \(T\), and \(gT\) where \(g \ll 1\) is the coupling constant. The excitations with energy \(T\) are energetic (hard) and localized quarks and gluons which can be described using kinetic theory. They radiate low-energy (soft) gluons which form a coherent field, just like photons form an electromagnetic field. HTL describes these soft gluons by integrating out the hard particles. In practice this is done by evaluting loop diagrams where the external particles are soft and the particle running in the loop is hard (hence the name). }{An accessible but lengthy introduction is \cite{Blaizot2001}} %Siggi
+\entry{Hartree Approximation}{}{}{}
+\entry{HBT Radii}{}{}{}
+\entry{Heavy Quark}{HQ}{The heavy quarks: bottom, charm and top. In HIC, charm and bottom are used as probes of the properties of the medium. The top quark decays too quickly to be a probe of the medium and therefore is of more interest for Beyond-the-Standard-Model (BSM) physics.}{}%Rouz
+\entry{High twist}{}{}{}
+\entry{Hydro-Attractor}{}{}{}
+\entry{Hydrodynamics}{}{Hydrodynamics is a general theory to describe fluids. It describes the time evolution of macroscopic observables such as fluid velocity, energy density and pressure. The only necessary ingredients are transport coefficients and an equation of state which completely characterize the macroscopic properties of the matter at hand. Relativistic hydrodynamics deals with relativistic fluids and is used to model the behaviour of the QGP formed in heavy-ion collisions.}{} %Siggi
+\entry{Initial state}{}{This generally refers to the pre-hydrodynamic phase of Heavy Ion Collisions. There are many models on the market for the initial state including MC-Glauber, IP-Glasma, EKRT, MC-KLN.}{}
+\entry{IP-Glasma}{}{Saturation based 2+1-D boost invariant initial condition. Combines gluon saturation from the IP-Sat model with Classical Yang-Mills evolution}{See also IP-Sat.}
+\entry{IP-Sat}{(Impact Parameter dipole SATuration model)}{Determines the saturation scale using the cross section for a quark anti-quark interacting with a proton. Parameters are costrained using deep inelastic scattering (DIS) data from HERA. IP-Sat is used to determine the saturation scale in IP-Glasma.}{For more information, see \cite{Kowalski:2003hm}.}
+\entry{Jet quenching}{}{The phenomenon when jets traversing a hot, dense QGP medium lose energy. This is seen in many jet observables when comparing AA and pp data.}{}
+\entry{Jet Recoil}{}{}{}
+\entry{JETSCAPE}{(The Jet Energy-loss Tomography with a Statistically and Computationally Advanced Program Envelope (JETSCAPE) collaboration)}{A multi-institutional collaboration working to produce a framework (the ``JETSCAPE framework") that provides all the pieces of a hydro-evolution to work together, allowing researchers to only modify the aspect that is their specialty.}{}
+\entry{Jet-Shape}{}{}{}
+\entry{JIMWLK}{}{}{}
+\entry{Kinetic theory}{}{A method of calculating transport properties that assumes well-defined hard constituents that collide in analogy to a kinetic theory of gases.}{}
+\entry{Knudsen number}{}{}{}
+\entry{KOMPOST}{}{Linear kinetic theory propagator for initial conditions of heavy ion collisions. }{See \cite{Kurkela:2018vqr} }
+\entry{KSS Bound}{(also KSS limit)}{An AdS/CFT calculation for a theoretical lower limit for $\eta/s = 1/4\pi$. This limit is generally considered to be a loose limit since the correspondence to physical studies is not precise.}{}
+\entry{KT algorithm}{(Kurganov-Tadmor algorithm)}{A MUSCL type scheme to solve partial-differential equations. As a MUSCL scheme this is well suited to deal with shocks and discontinuities and has a small numerical viscosity.}{A good discussion on the  KT algorithm can be found in the appendix of the first MUSIC paper \cite{Schenke:2010nt}.}
+\entry{Kubo formula}{}{}{}
+\entry{Kurtosis}{}{A measurement of the ``tailedness" of the shape of a probability distribution, used along with skewness to describe the shape of that distribution.}{\url{https://en.wikipedia.org/wiki/Kurtosis}}
+\entry{Landau-Lifshitz frame}{}{For a viscous fluid with conserved charges, there is a non-trivial choice for the definition of fluid velocity (also see Eckart Frame). A possible definition has the four-velocity as the so-called "eigenvector" of energy-momentum tensor $u_{\nu}T^{\mu\nu} = \epsilon u^{\mu}$. The local rest frame with this definition of fluid velocity is called the Landau-Lifshitz frame. There is no net energy flux in this frame. For ideal fluids, Landau-Lifshitz frame and Eckart frame are identical.}{This pedagogical article by Paul Romatschke has a nice discussion on derivation of fluid dynamics and also choice of fluid velocity \cite{Romatschke:2009im}}
+\entry{Lattice QCD}{}{A first-principles ab-initio approach to QCD where a lattice is discretized and the full QCD calculations are performed non-perturbatively. Extremely computationally intensive, but are full non-perturbative calculations of QCD physics.}{}
+\entry{Latin hybercube sampling}{}{A sampling method that ensures one deign point for each row and column, scaling the number of computations by n and not $n^2$. This is often suffficient for most parameter space exploration, for example, with a Gaussian Process emulator.}{}
+\entry{LBT}{}{Linearized Boltzmann Transport}{}
+\entry{Linear Sigma model}{(also LSM, L$\sigma$M)}{An early model of low-energy pion dynamics with a mediating heavy meson, known as sigma or $\sigma$. The LSM exhibits many properties of pion gases, such as a crossover and is a good first-order approximation.}{}
+\entry{LPM effect}{(Landau-Pomeranchuk-Migdal effet)}{In a perturbative QGP medium an on-shell particle can emit another particle. Examples are a medium gluon that emits another gluon or an energetic quark in a jet that emits an energetic gluon. Furthermore, quarks in the medium can emit photons. In all of these processes the emitter gets a momentum kick by interacting with medium particles. This kick brings the emitter slightly off-shell, allowing it to emit. The LPM effect is the fact that the emitter gets repeated kicks from the medium during the emission at leading order in perturabation theory. These different kicks give distructive interference which reduces the rate of emission.}{}%Siggi
+
+\entry{Lund plane}{}{A way to visualize the measurement of jet modification.}{\textbf{ask Danny to give some more info on this}}
+\entry{MARTINI}{(Modular Algorithm for Relativistic Treatment of heavy IoN Interactions)}{A comprehensive event generator for the hard and penetrating probes in high energy nucleus-nucleus collisions. Uses PYTHIA to generate the intial hard scattering and then propagates the generated parton list through a hydro history file generated by MUSIC.}{\cite{PhysRevC.80.054913}}%modified by Rouz
+\entry{$\mathbf{\eta}$ (Pseudo-rapidity)}{Not to be confused with rapidity.}{The angle between the particle in position space and the positive direction of the beam axis where z is the angular dependence. $\eta = -ln\tan(\theta/2)=arctanh(p_{L}/\textbf{p})$. For simple bjorken flow $\eta=arctanh(z/t)$.}{}
+\entry{$\mathbf{\eta}$ (Shear viscosity)}{(also $\eta/s$ for ratio with entropy density)}{Resistance of a fluid to deformation and can be extracted by considering a purely shear flow, $u_x(y)$, where velocity in the x direction is purely a function of its y posiiton. This introduces an inherent deformation, which is resisted by the shear viscosity - an ideal fluid will have no resistance to flows of this type. This is the domiant viscosity in heavy ion collisions and was the first whose importance was demonstrated computationally.}{See also KSS Bound.}
+\entry{MCMC}{(Markov Chain Monte Carlo)}{An intelligent way of approximating a probability distribution typically used in Bayesian inference. When enough steps of the Markov chain have been taken, the distribution of steps asymptotes to the target distribution, typically the posterior in a Bayesian study.}{}
+\entry{MC-Glauber}{}{An geometric event-by-event fluctuating initial state model. This samples nucleon positions based on an underlying distribution (typically a Woods-Saxon distribution) and uses these positions to initialize an energy density for heavy ion collisions.}{See also \cite{Glauber}}
+\entry{MC-KLN}{}{Another initial state model, well-known for being an early physically-motivated model that has since been updated to include effects such as subnucleonic fluctuations. }{See also \cite{KLN}}
+\entry{McLerran-Venugopalan Model}{(MV Model)}{}{}
+\entry{Medium indcued emissions}{}{}{}
+\entry{Medium Recoil}{}{When an energetic parton jet passes through the thermilized QGP, it sometimes exites some medium particles which become part of the jet by "recoil".}{}
+\entry{Medium Response}{}{When a high energy parton (jet) passes through a thermalized medium, it deposits enegy in the thermal medium which evolves hydrodynamically. Theoretically it is modelled as a source term for the hydrodynamic currents. This is a good overview of the topic \cite{Tachibana:2019hrn}}{}
+\entry{Milne Coordinates}{($\tau-\eta$ coordinates)}{}{}
+\entry{Minimum bias}{}{This typically refers to all events, without any centrality selection or impact parameter cuts. }{}
+\entry{Multiplicity}{}{Number of particles produced.}{}
+\entry{MUSCL}{(Monotonic Upwind Scheme for Conservation Law)}{A general finite volume numerical scheme to solve partial differential equations which is good at dealing with shocks and discontinuities. The finite volume scheme implies that instead of using the value of a quantity at the center of a fluid cell, cell-averaged quantities are used. This uses piecewise slope-limited extrapolated fluxes on both sides of a fluid cell. The specifics of the extrapolation depends on the specific scheme used like the NT or the KT algorithm.}{A good primer on the MUSCL scheme can be found on its \href{https://en.wikipedia.org/wiki/MUSCL_scheme}{Wikipedia page}.}
+\entry{MUSIC}{(MUScl for Ion Collisions)}{A 3+1 D viscous relativistic hydrodynamic code for heavy-ion collision simulations developed at McGill University. MUSIC uses the Kurganov-Tadmor (KT) algorithm to solve the hydrodynamic equations as well as a flux limiter. The KT algorithm has small numerical viscosity effects and is capable of dealing with shocks and discontinuities. MUSIC is capable of generating MC-Glauber initial conditions on its own. It also has Cooper-Frye and resonance decay routines. It can be used with a variety of initial conditions and different hadronization packages.}{For various features of MUSIC, see the \href{http://www.physics.mcgill.ca/MUSIC/}{MUSIC webpage}.}
+\entry{Near side ridge}{}{}{}
+\entry{Negative binomial distribution}{}{A discrete distribution with a convenient shape that is often interpolated to provide a continuous distributino function. It is not clear how rigorous this is from first principles, but it is used phenomenologically.}{}
+\entry{NT algorithm}{(Nessyahu-Tadmor algorithm)}{This is a precursor to the KT algorithm.}{}
+\entry{Nuclear modification factor}{}{}{}
+\entry{Numerical viscosity}{}{Numerical viscosity is the consequence of introducing numerical damping for stability of an algorithm for solving partial differential equations. Let us consider the simple example of a 1 dimensional conservation equation $\partial_{t}\rho = -\partial_{x}J$ where $J=v\rho$ is the current. A naive discretization like \begin{equation*} \frac{\rho^{n+1}_{j}-\rho^{n}_{j}}{\Delta t} = \frac{J^{n}_{j+1}-J^{n}_{j-1}}{2\Delta x} \end{equation*} is always unstable as the solution either grows without bound or oscillates too much. Here $^n$ is the temporal index while $_j$ is the spatial index. Replacing $\rho^{n}_{j}$ on the left by $(\rho^{n}_{j+1}-\rho^{n}_{j-1})/2$ will bring stability but now we would be solving the equation $\partial_{t}\rho = -\partial_{x}J + ((\Delta x)^{2}/(2\Delta t))\partial_{x}^{2}\rho$. The second term on right is the numerical viscosity term. If $((\Delta x)^{2}/(2\Delta t))$ term is large, numerical viscosity would be the dominant effect. Every scheme has its own numerical viscosity.}{This dicussion on numerical viscosity could be found in the first MUSIC paper \cite{Schenke:2010nt}}
+\entry{Optical Glauber model}{}{Similar to the MC-Glauber model above, but without fluctuating nucleon positions. This model was broadly superceded by MC-Glauber upon the discovery that it could not reprouce $v_3$.}{See also \cite{Glauber}}
+\entry{Participants}{}{Any nucleon that experiences a binary collision.}{}
+\entry{Parton cascade}{}{}{}
+\entry{Parton recombination}{}{}{}
+\entry{Phase space}{}{Nominally refers to position-momentum space, but in practice is used to refer to any parameter space that is not coordinate space in which kinematic, physics, etc. limits can be placed on calculations.}{}
+\entry{Pion Wind}{}{}{}
+\entry{Prompt Photons}{}{Photons produced through partonic interactions in the very first instants of nuclear collisions as well as photons from the vacuum shower. At leading-order QCD Compton Scattering and quark-antiquark annihilations are the production channels.}{}%modified by Rouz
+\entry{Pseudo-rapidity}{}{}{See $\mathbf{\eta}$ (Pseudo-rapidity).}
+\entry{Beyond the Standard Model}{BSM}{Beyond Standard Model physics: interactions or particles that fall outside of the Standard Model of Particle Physics}{}%Rouz
+\entry{PYTHIA}{}{A LO Monte-Carlo generator for high energy hadron, $e^+e^-$ and even $\gamma\gamma$ collisions. Used in particle and nuclear physics. It provides hard scattering generation, a parton shower algorithm as well as the ability to hadronize the partons using the Lund Hadronization model.}{}%Rouz
+\entry{$\hat{q}$ (Jet transport coefficient)}{}{This transport coefficient measures the amount of transverse momentum added to a system when it is struck by a probe purely in the longitudinal direction. More specifically, it is the average transverse momentum broadening squared per
+unit length/time due to elastic scatterings with medium.}{\begin{equation*} \hat{q} = \frac{d\langle k_\bot^2\rangle }{dL}\end{equation*}}
+\entry{Quark Gluon Plasma}{(QGP)}{A state of nuclear matter that exists in high temperature or high density. In this phase, quarks experience deconfinement and are the relevant degree of freedom. In the high-temperature, low-density regime, there is not a phase transition, but a smooth crossover. At higher densities, a phase transition exists. Efforts are underway to determine the nature of the possible critical point. Hydrodynamics are considered to be a good model for the dynamics of this plasma.}{}
+\entry{Quest revert}{}{A function in MUSIC which regulates the size of non-equilibrium contribution to the energy-momentum tensor in dilute regions. Hydrodynamics is solved numerically on a 2 or 3 D grid. There are dilute regions at the edge of the grid where there is no matter. Numerical effects could give rise to large unphysical non-equilibrium contributions in these empty cells that can then travel to regions of interest. Quest Revert suppresses this contribution.}{}
+\entry{R$_{AA}$}{}{The ratio of hadron or jet spectra in A-A collisions to the same spectra in p-p collisions, scaled by the number of binary collisions. This quantity measures how the presence of the QGP medium modifies the spectra of jets or hadrons. Jets that traverse a hot, dense QGP medium will lose energy (jet quenching). In p-p collisions, it is assumed that QGP is not formed, and the jet propagates in vacuum.  Thus, taking the ratio of the spectra gives a measures how the presence of a nucleus affects the jet spectra. $R_{AA}=1$ indicates that there is no jet quenching.}{}
+\entry{Rapidity}{(y)}{Also called space-time rapidity. Not to be confused with pseudo-rapidity. Rapidity is defined as $yarctanh(v/c)$. In Bjorken flow $y=arctanh(z/t)$}{}
+\entry{Resonance}{}{}{}
+\entry{Reynolds Number}{}{This is a number used in classical fluid dynamics to predict the behavior of fluids, e.g. when they exhibit laminar or turbulent flow.}{See \url{https://en.wikipedia.org/wiki/Reynolds_number}.}
+\entry{Saturation Scale}{}{The momentum scale at which gluon recombination is comparable to gluon radiation within high energy hadrons. The gluon density is said to ``saturate" at this scale.}{}
+\entry{Scalar Product Method}{}{}{For more information, see \cite{Luzum:2012da}}
+\entry{Shear viscosity}{}{See $\eta$ (Shear viscosity)}{}
+\entry{Skewness}{}{A property of distributions that characterizes departure from symmetry about the mean. A convenient way to think of this is that the distribution is right-skewed if a boot pressing on the right side of the distribution would smush the symmetric distribution to cause the observed shape.}{}
+\entry{SMASH}{}{A hadronic transport code that uses a kinetic theory/pure transport approach to calculate the dynamics of a hadron gas. Written in C++, this is considered to be a more modern code and is used in the JETSCAPE framework.}{See also UrQMD}
+\entry{Soft drop condition}{}{}{}
+\entry{Spectators}{}{Any nucleon that does not experience a binary collision, and thus does not participate in the collision. These nucleons continue down the beam pipe.}{}
+\entry{Stress-energy tensor}{(energy-momentum tensor, T$^{\mu\nu}$)}{Stress-energy tensor is a Lorentz tensor which encapsulates information about energy density, momentum and their fluxes. T$^{00}$ is the energy density, T$^{0j}$ is the $j^{th}$ momentum component, T$^{i0}$ is the energy flux in the $i^{th}$ direction and T$^{ij}$ is the flux of $j^{th}$ momentum component in $i^{th}$ direction.}{}
+\entry{Sudakov form factor}{}{}{}
+\entry{$\tau-\eta$ Coordinates}{}{See Milne Coordinates}{}
+\entry{Thermal Photons}{}{These are photons emitted from a QGP medium that is in or close to thermal equilibrium. In perturbation theory there are two possible channels: two-to-two scattering with a photon in the final state (e.g. quark and gluon go to quark and photon) and a quark that emits a photon after getting momentum kicks from the medium. This latter channel involves the LPM effect.}{} %Siggi
+\entry{Transport coefficient}{}{Transport coefficients describe how matter in thermal equilibrium responds when it is pushed slightly out of equilibrium. As an example shear viscosity and bulk viscosity describe how much a fluid flows when it is pushed by an external force. Another example is electric conductivity which describes how much charge flows when a piece of matter is put in an external electric field. A major goal of heavy-ion collisions is to determine the transport coefficients of QGP experimentally. For evaluation of kinetic theory, see kinetic theory and Kubo formula.}{} %Siggi
+\entry{TRENTo}{(Reduced Thickness Event-by-event Nuclear Topology)}{An initial state model produced at Duke that is tunable to reproduce properties of different models such as IP-Glasma and MC-KLN. It is parametric, is not derived from first principles and requires the addition of free-streaming to be a full pre-equilibrium model. It is better thought of as a generative model for initial states rather than a descriptive model and has significant implications for parameter inference and interpretation.}{}
+\entry{Unfolding}{}{}{}
+\entry{UrQMD}{(Ultra-relativistic Quantum Molecular Dynamics)}{Hadronic afterburner that includes resonance decays and hadronic re-scatterings.  Written in FORTRAN and notoriously difficult to read/alter.}{For more information, see the \href{https://urqmd.org/}{UrQMD webpage}.}
+\entry{Vacuum-like emissions (VLE)}{}{}{}
+\entry{Vacuum shower}{}{Collisions in colliders create energetic, highly off-shell particles. These particles emit gluons and quarks to create a shower of collimated and energetic particles. (Collimated means that they are all roughly moving in the same direction.) Normally, a mother particles splits into two daughter particles which have less energy and are less off-shell than the mother. The daugther particles, in turn, split into other particles and so forth. This tree like branching is called a vacuum shower. Codes like PYTHIA and HERWIG aim to describe this.}{} %Siggi
+\entry{v$_n$}{(Flow harmonics)}{v$_n$s are a measure of azimuthal anisotropy in the collision system. They are the coefficients of fourier expansion of particle spectra in azimuthal direction. They can be given as \begin{equation*}    dN/d\phi \propto 1 + 2\sum^{\infty}_{n=1}{v_{n}\cos n(\phi-\Phi_{n})} \end{equation*} Here $N$ is the particle multiplicity, $\phi$ is the particle angle and $\Phi_{n}$ is the event plane angle.}{ For details on v$_n$ and their measurement techniques, see \cite{Jia:2014jca}.}
+\entry{Wilson line}{}{}{}
+\entry{Woods-Saxon Distribution}{}{A classic density distribution in nuclear physics used to describe the density of nuclei. Effectively the logit function.}{}
+\entry{Wounded nucleon model}{}{}{}
+\entry{Wounded quark model}{}{}{}
+\entry{$z_g$ (Jet splitting)}{}{A quantity that calculates the subjet splitting. When $z_g$ is closer to 0, then there is one hard subjet. The closer it is to 0.5, the more evenly balanced two hard subjets are.}{}
+
+\end{multicols}
+
+%------------------------------------------------
+\newpage
+\bibliography{references} 
+\bibliographystyle{abbrv}
+\end{document}
